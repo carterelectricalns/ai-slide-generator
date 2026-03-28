@@ -1,0 +1,65 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) adapted for SaaS Productivity",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F8FAFC",
+    "primary": "#0052FF",
+    "primary_hover": "#003DCC",
+    "text_main": "#0F172A",
+    "text_muted": "#64748B",
+    "border": "#E2E8F0",
+    "accent_blue": "#DBEAFE"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "banned_fonts": ["Inter", "Roboto", "Open Sans", "Lato"],
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-bold",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-semibold",
+      "h3": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base leading-relaxed text-slate-600",
+      "labels": "text-xs tracking-[0.2em] uppercase font-bold text-slate-500"
+    }
+  },
+  "layout_spacing": {
+    "dashboard_grid": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+    "generous_padding": "p-8 or p-12 for empty states",
+    "card_style": "flat background, 1px subtle border (border-slate-200), rounded-xl, no shadow by default, shadow-sm on hover",
+    "sidebar": "collapsible left sidebar for desktop"
+  },
+  "components": {
+    "buttons": "Shadcn default with primary blue (#0052FF), rounded-md. Hover state must maintain text visibility.",
+    "inputs": "Shadcn input, focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500",
+    "slide_preview": "Shadcn Carousel or Swiper. Minimal navigation arrows.",
+    "generation_progress": "Vertical stepper UI. Active step highlighted in primary blue. Smooth transition.",
+    "forms": "Use Shadcn forms. Left-align labels."
+  },
+  "media": {
+    "auth_background": {
+      "url": "https://images.unsplash.com/photo-1771846340715-e5f379d91ad9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMHdoaXRlJTIwYmx1ZSUyMG1pbmltYWwlMjB0ZWNofGVufDB8fHx8MTc3NDcwNjg5OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract blue and white wave to be used as a right-side panel on the login/register screen or a subtle background overlay."
+    },
+    "empty_state_desk": {
+      "url": "https://images.pexels.com/photos/7681493/pexels-photo-7681493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Clean desk setup to be used creatively in empty state of presentation history if needed, or stick to lucide icons."
+    }
+  },
+  "motion_accessibility": {
+    "hover_states": "translate-y-[-2px] transition-transform duration-200 ease-out",
+    "loading": "skeleton loaders for slides during generation",
+    "contrast": "Ensure primary blue (#0052FF) has >4.5:1 contrast against white background for text/buttons.",
+    "testing": "All interactive elements MUST have data-testid attributes."
+  },
+  "instructions_for_main_agent": [
+    "1. Setup Tailwind config with Outfit and Manrope fonts via Google Fonts.",
+    "2. Override Shadcn default theme to map primary to #0052FF.",
+    "3. Build the Auth flow (Login/Register) using a split screen layout: Left form, Right image (auth_background).",
+    "4. Build a persistent Dashboard Layout with a collapsible left sidebar containing 'New Presentation' and 'History'.",
+    "5. For the AI Generation Flow: Use a multi-step vertical tracker UI showing 'Outline -> Content -> Layout -> Render' while generation API is running.",
+    "6. Use Shadcn Carousel for the Slide Preview feature once slides are generated.",
+    "7. Include distinct download buttons for .pptx and .pdf.",
+    "8. Add data-testid attributes to all buttons, links, and forms."
+  ]
+}
