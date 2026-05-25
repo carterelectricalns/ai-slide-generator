@@ -1,1 +1,8 @@
 /* SlideForge - AI Presentation Generator Styles */
+a[href*="emergent"],
+iframe[src*="emergent"],
+[class*="emergent"],
+[id*="emergent"] {
+  display: none !important;
+  visibility: hidden !important;
+}
