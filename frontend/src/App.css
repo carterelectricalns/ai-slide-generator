@@ -6,3 +6,18 @@ iframe[src*="emergent"],
   display: none !important;
   visibility: hidden !important;
 }
+/* Hide Emergent floating badge */
+
+body a[href*="emergent"],
+
+body div[class*="emergent"],
+
+body [class*="made"],
+
+body [aria-label*="Emergent"] {
+
+  display: none !important;
+
+  opacity: 0 !important;
+
+  pointer-events: none !important;
